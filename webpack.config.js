@@ -10,8 +10,8 @@ process.env.NODE_ENV == 'production' ? PROD = true : PROD = false;
 console.log(`WEBPACK: PROD: ${PROD}`)
 
 const entry = {}
-const entries = glob.sync('./src/**.js', {
-  ignore: './src/*_*.js'
+const entries = glob.sync('./src/**/*.js', {
+  ignore: './src/**/_*.js'
 });
 entries.map(path => {
   entry[path.replace(/\.\/src/, '')] = path;
