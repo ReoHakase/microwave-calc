@@ -7,6 +7,10 @@ import initStyles from '../css/init.scss';
 import styles from '../css/main.scss';
 import Clock from './_clock';
 
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('./service-worker.js').then(function() { console.log('Service Worker Registered'); });
+}
+
 class App extends React.Component {
   constructor(){
     super();

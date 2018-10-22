@@ -8,6 +8,11 @@
       "src": "./icon/icon192.png",
       "type": "image/png",
       "sizes": "192x192"
+    },
+    {
+      "src": "./icon/icon256.png",
+      "type": "image/png",
+      "sizes": "256x256"
     }
   ],
   "background_color": "#2254b4",
