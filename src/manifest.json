@@ -1,0 +1,15 @@
+{
+  "short_name": "レンジ計算機",
+  "name": "電子レンジ計算機",
+  "start_url": "https://microwave-calc.herokuapp.com/",
+  "display": "standalone",
+  "icons": [
+    {
+      "src": "./icon/icon192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    }
+  ],
+  "background_color": "#2254b4",
+  "orientation": "portrait"
+}
