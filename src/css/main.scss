@@ -1,15 +1,19 @@
 .wrapper {
+  position: fixed;
+  top: 0; left: 0;
   width: 100vw;
   height: 100vh;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  -webkit-tap-highlight-color: transparent;
 }
 
 .clock {
   width: 100vmin;
   height: 100vmin;
+  -webkit-tap-highlight-color: transparent;
 }
 
 @media all and (orientation: portrait){
