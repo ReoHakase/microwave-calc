@@ -35,15 +35,20 @@ module.exports = {
         to: path.join(__dirname, 'public', 'manifest.json'),
         toType: 'file'
       },
+      // {
+      //   from: path.join(__dirname, 'src', 'icon', 'icon192.png'),
+      //   to: path.join(__dirname, 'public', 'icon', 'icon192.png'),
+      //   toType: 'file'
+      // },
+      // {
+      //   from: path.join(__dirname, 'src', 'icon', 'icon256.png'),
+      //   to: path.join(__dirname, 'public', 'icon', 'icon256.png'),
+      //   toType: 'file'
+      // },
       {
-        from: path.join(__dirname, 'src', 'icon', 'icon192.png'),
-        to: path.join(__dirname, 'public', 'icon', 'icon192.png'),
-        toType: 'file'
-      },
-      {
-        from: path.join(__dirname, 'src', 'icon', 'icon256.png'),
-        to: path.join(__dirname, 'public', 'icon', 'icon256.png'),
-        toType: 'file'
+        from: 'src/icon/',
+        to: 'icon/[name].[ext]',
+        toType: 'template'
       }
     ], {})
   ],
