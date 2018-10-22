@@ -1,0 +1,17 @@
+.wrapper {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.clock {
+  width: 100vmin;
+  height: 100vmin;
+}
+
+@media all and (orientation: portrait){
+  /* ポートレート画面時のスタイル */
+}
