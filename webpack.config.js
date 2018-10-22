@@ -49,6 +49,11 @@ module.exports = {
         from: 'src/icon/',
         to: 'icon/[name].[ext]',
         toType: 'template'
+      },
+      {
+        from: 'src/apple-touch-icon.png',
+        to: 'apple-touch-icon.png',
+        toType: 'file'
       }
     ], {})
   ],
