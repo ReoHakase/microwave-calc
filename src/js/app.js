@@ -18,13 +18,13 @@ class App extends React.Component {
       second: 0
     }
   }
-  onClockChange(degree){
-    this.setState({second: degree / 6});
+  onClockChange(second){
+    this.setState({second: second});
   }
   render(){
     return (
       <div className={styles.wrapper}>
-        <Clock className={styles.clock} degree={this.state.second * 6} onChangeHandler={d => this.onClockChange(d)}></Clock>
+        <Clock className={styles.clock} second={this.state.second} onChangeHandler={d => this.onClockChange(d)}></Clock>
       </div>
     );
   }

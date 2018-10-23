@@ -15,19 +15,26 @@
 
 .knob {
   z-index: 2;
-  background: url('../asset/knob.png') center/cover;
+  background: url('../asset/knob.svg') center/cover;
+  transition: 0.05s;
   --knobDegree: 0deg;
   transform:rotate(var(--knobDegree));
 }
 
 .timeMoniter {
   z-index: 1;
-  background: url('../asset/timeMonitor.png') center/cover;
+  background: url('../asset/timeMonitor.svg') center/cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  font-size: 10vmin;
+  user-select: none;
 }
 
 .clockFace {
   z-index: 0;
-  background: url('../asset/clockFace.png') center/cover;
+  background: url('../asset/clockFace.svg') center/cover;
 }
 
 @media all and (orientation: portrait){
