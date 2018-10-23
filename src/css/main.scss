@@ -1,21 +1,98 @@
+:global {
+  @import url('https://fonts.googleapis.com/css?family=IBM+Plex+Mono:500');
+  @import url('https://fonts.googleapis.com/earlyaccess/sawarabigothic.css');
+  * {
+    font-family: 'IBM Plex Mono', "Sawarabi Gothic", monospace;
+  }
+}
+
 .wrapper {
   position: fixed;
   top: 0; left: 0;
   width: 100vw;
   height: 100vh;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  display: grid;
+  grid-template-columns: 1fr 80vw 1fr;
+  grid-template-rows: 1fr 80vh 1fr;
+  background: linear-gradient(30deg, var(--color-gdr2), var(--color-gdr));
 }
 
-.clock {
-  width: 100vmin;
-  height: 100vmin;
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+.content {
+  grid-column: 2 / 3;
+  grid-row: 2 / 3;
+  display: grid;
+  grid-template-columns: 80vh 1fr;
+  grid-template-rows: 1fr 8fr 1fr;
+  grid-gap: 0 2vmax;
+  // background: #fff;
+  border-radius: var(--borderRadius);
 }
+
+.dial {
+  grid-column: 1 / 2;
+  grid-row: 1 / 4;
+}
+
+.wattSelector {
+  grid-column: 2 / 3;
+  grid-row: 2 / 3;
+  border-radius: var(--borderRadius);
+}
+
+
+
+
 
 @media all and (orientation: portrait){
   /* ポートレート画面時のスタイル */
+  .wrapper {
+    grid-template-columns: 0 1fr 0;
+    grid-template-rows: 1fr 80vh 1fr;
+  }
+  .content {
+    grid-template-columns: 1fr 18fr 1fr;
+    grid-template-rows: 100vw 1fr;
+    grid-gap: 2vmax 0;
+  }
+  .dial {
+    grid-column: 1 / 4;
+    grid-row: 1 / 2;
+  }
+  .wattSelector {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+  }
+}
+
+
+
+
+
+@media all and (min-aspect-ratio: 3 / 5) and (max-aspect-ratio: 3 / 4){
+  .content {
+    grid-template-columns: 1fr 80vw 1fr;
+    grid-template-rows: 80vw 1fr;
+  }
+  .dial {
+    grid-column: 2 / 3;
+  }
+}
+
+@media all and (min-aspect-ratio: 3 / 4) and (max-aspect-ratio: 1 / 1){
+  .content {
+    grid-template-columns: 1fr 60vw 1fr;
+    grid-template-rows: 60vw 1fr;
+  }
+  .dial {
+    grid-column: 2 / 3;
+  }
+}
+
+@media all and (min-aspect-ratio: 1 / 1) and (max-aspect-ratio: 4 / 3){
+  .wrapper {
+    grid-template-rows: 1fr 60vh 1fr;
+  }
+  .content {
+    grid-template-columns: 60vh 1fr;
+  }
 }

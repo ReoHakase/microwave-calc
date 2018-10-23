@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import classnames from 'classnames';
-import styles from '../css/clock.scss';
+import styles from '../css/dial.scss';
 
 class Clock extends React.Component {
   constructor(){
@@ -133,7 +133,7 @@ class Clock extends React.Component {
         ref={this.clockRef}>
         <div className={classnames(styles.child, styles.knob)} style={knobDegreeStyle}></div>
         <div className={classnames(styles.child, styles.timeMoniter)}>{timeString}</div>
-        <div className={classnames(styles.child, styles.clockFace)}></div>
+        <div className={classnames(styles.child, styles.dialFace)}></div>
       </div>
     );
   }

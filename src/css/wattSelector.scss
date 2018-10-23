@@ -1,0 +1,35 @@
+.wrapper {
+  padding: var(--borderRadius);
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 5fr;
+  background: #fff;
+  user-select: none;
+}
+
+.description {
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+  font-size: 3vmin;
+}
+
+.buttonWrapper {
+  grid-column: 1 / 2;
+  grid-row: 2 / 3;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  grid-gap: 1vmin;
+}
+
+@media all and (orientation: portrait){
+  /* ポートレート画面時のスタイル */
+  .wrapper {
+    grid-template-rows: 2fr 5fr;
+  }
+  .buttonWrapper {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-gap: 2vmin;
+  }
+}

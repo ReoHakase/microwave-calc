@@ -5,7 +5,8 @@ import ReactDOM from 'react-dom';
 import classnames from 'classnames';
 import initStyles from '../css/init.scss';
 import styles from '../css/main.scss';
-import Clock from './_clock';
+import Dial from './_dial';
+import WattSelector from './_wattSelector';
 
 if ('serviceWorker' in navigator) {
   navigator.serviceWorker.register('./service-worker.js').then(function() { console.log('Service Worker Registered'); });
@@ -18,13 +19,22 @@ class App extends React.Component {
       second: 0
     }
   }
-  onClockChange(second){
+  onTimeChange(second){
     this.setState({second: second});
+  }
+  onConvertWatt(before, after){
+    const afterSecond = (before * this.state.second) / after;
+    this.setState({
+      second: afterSecond
+    });
   }
   render(){
     return (
       <div className={styles.wrapper}>
-        <Clock className={styles.clock} second={this.state.second} onChangeHandler={d => this.onClockChange(d)}></Clock>
+        <div className={classnames(styles.content)}>
+          <Dial className={styles.dial} second={this.state.second} onChangeHandler={d => this.onTimeChange(d)} />
+          <WattSelector className={styles.wattSelector} onConvertWattHandler={(before, after) => this.onConvertWatt(before, after)} />
+        </div>
       </div>
     );
   }
@@ -32,5 +42,5 @@ class App extends React.Component {
 
 ReactDOM.render(
   <App />,
-  document.querySelector('.content')
+  document.querySelector('.REACT_COMPONENT_WRAPPER')
 );

@@ -1,8 +1,11 @@
 :global {
   :root {
     /* グローバルスコープでのCSS変数定義 (CSS Modulesでは非推奨) */
-    --color-main: #f66817;
-    --color-sub:  #182542;
+    --color-main: #FF003E;
+    --color-sub:  #1A2F5B;
+    --color-gdr: #58f4c9;
+    --color-gdr2: #5271f7;
+    --borderRadius: 2vmin;
   }
   * {
     overflow: hidden;
@@ -12,7 +15,7 @@
     margin: 0;
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   }
-  .content {
+  .REACT_COMPONENT_WRAPPER {
     width: 100vw;
     height: 100vh;
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);

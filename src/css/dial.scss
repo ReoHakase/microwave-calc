@@ -16,7 +16,7 @@
 .knob {
   z-index: 2;
   background: url('../asset/knob.svg') center/cover;
-  transition: 0.05s;
+  // transition: 0.1s;
   --knobDegree: 0deg;
   transform:rotate(var(--knobDegree));
 }
@@ -32,9 +32,9 @@
   user-select: none;
 }
 
-.clockFace {
+.dialFace {
   z-index: 0;
-  background: url('../asset/clockFace.svg') center/cover;
+  background: url('../asset/dialFace.svg') center/cover;
 }
 
 @media all and (orientation: portrait){

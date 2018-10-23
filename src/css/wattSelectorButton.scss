@@ -1,0 +1,22 @@
+.button {
+  transition: 0.25s;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: var(--borderRadius);
+  background: linear-gradient(30deg, var(--color-gdr2), var(--color-gdr));
+  color: #fff;
+  font-size: 5vmin;
+}
+.button:hover {
+  filter: brightness(1.1);
+}
+.button:active {
+  filter: brightness(0.9);
+}
+
+.highlighted {
+  // background: var(--color-main);
+  background: linear-gradient(30deg, #f54d7a, #f28354);
+}
